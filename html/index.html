@@ -1,130 +1,219 @@
 <!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Pixies</title>
-        <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/core.css">
-    </head>
-    <body>
-        <div class="main-container">
-            <nav>
-                <ol>
-                    <li>
-                        <a href="">
-                            <h1>Pixies</h1>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">Accueil</a>
-                    </li>
-                    <li>
-                        <a href="">Découvrir Pixie</a>
-                    </li>
-                    <li>
-                        <a href="">Personnalise Pixie</a>
-                    </li>
-                    <li>
-                        <button type="button">
-                            <img src="../img/icones/el_shopping-cart.svg" alt="Icone du panier">
-                            Mon panier
-                        </button>
-                    </li>
-                </ol>
-            </nav>
-            <section>
-                <div class="info-section">
-                    <h2 class="upper">Let's go PIXIES</h2>
-                    <strong>La petite fée que tu peux emporter partout avec toi</strong>
-                    <p>Occupes-toi de ta petite fée, regardes-là éclore et évoluer tout au long de sa vie  !
-                        Aides-la à decouvrir ses pouvoirs et entraines-la à les maitriser pour qu’elle devienne la fée la plus talentueuse du monde des Pixies.
-                    </p>
-                    <strong>Ta pixies et toi vous pourrez :</strong>
-                    <ul>
-                        <li>Partir à la recherche des trésors magiques</li>
-                        <li>Te faire pleins de nouveaux amis</li>
-                        <li>Découvrir l’univers magique de PixiTown</li>
-                    </ul>
-                    <strong>Et bien plus encore !</strong>
-                    <button type="button">Découvrir Pixie</button>
-                </div>
-                <div class="image-section">
-                    <img src="../img/img%20png%20x1/pixies-bleu-accueil.png" alt="Pixie Bleu">
-                </div>
-            </section>
-            <section>
-                <div class="image-section">
-                    <img src="" alt="">
-                </div>
-                <div class="info-section">
-                    <h2>Glisse ta souris de droite à gauche pour découvrir le jeu</h2>
-                    <img src="" alt="">
-                    <div class="description-section">
-                        <img src="" alt="">
-                        <h3>Va à l'école de magie</h3>
-                        <p>Inscris ta pixie à l’école de magie pour devenir la meilleure pixie, tu pourras lui apprendre plein d’enchantements qui épateront tes amis  !</p>
-                    </div>
-                    <div class="description-section">
-                        <img src="" alt="">
-                        <h3>Rejoins tes amis</h3>
-                        <p>Rejoins d’autres pixie pour t’amuser, rigoler et découvrir plein de mini-jeux exclusifs !</p>
-                    </div>
-                    <div class="description-section">
-                        <img src="" alt="">
-                        <h3>Pars à l’aventure</h3>
-                        <p>Explore plus de 30 lieux et débloque de nouvelles tenues pour être encore plus stylé!</p>
-                    </div>
-                    <div class="description-section">
-                        <img src="" alt="">
-                        <h3>Pars à l’aventure</h3>
-                        <p>Collectionne des cartes et trouve des coffres remplis de trésor pour améliorer ta pixie.</p>
-                    </div>
-                </div>
-                <progress></progress>
-            </section>
-            <section>
-                <div class="image-section">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                </div>
-                <div class="info-section">
-                    <strong>Découvre nos différents motifs !</strong>
-                    <button type="button">Personnalise Pixie</button>
-                </div>
-            </section>
-            <section>
-                <h2>Personnalise ta Pixie !</h2>
-                <div class="info-section">
-                    <p><span>Magic</span><span>White</span></p>
-                    <img src="" alt="">
-                    <div class="card">
-                        <h4>Choisis ta couleur !</h4>
-                        <dl>
-                            <dt>Blanc:</dt>
-                            <dd></dd>
-                            <dt>Bleu:</dt>
-                            <dd></dd>
-                            <dd></dd>
-                            <dt>Rose:</dt>
-                            <dd></dd>
-                            <dd></dd>
-                            <dt>Vert:</dt>
-                            <dd></dd>
-                            <dt>Violet:</dt>
-                            <dd></dd>
-                            <dd></dd>
-                        </dl>
-                        <hr>
-                        <p>49,99€</p>
-                        <button type="button">Ajouter à mon panier</button>
-                    </div>
-                </div>
-            </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pixies</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/core.css">
+</head>
+<body>
+<div class="main-container">
+    <div class="ellipse"></div>
+    <div class="ellipse"></div>
+    <div class="ellipse"></div>
+    <div class="ellipse"></div>
+    <div class="ellipse"></div>
+    <div class="ellipse"></div>
+    <nav>
+        <ol>
+            <li>
+                <a href="">
+                    <img src="../img/img%20png%20x1/LOGO%20PIXIE%20fond%20blanc.svg" alt="Logo Pixie" width="209px" height="48px">
+                </a>
+            </li>
+            <li class="active-menu">
+                <a href="">Accueil</a>
+            </li>
+            <li>
+                <a href="" class="discover">Découvrir Pixie</a>
+            </li>
+            <li>
+                <a href="" class="perso">Personnalise Pixie</a>
+            </li>
+            <li>
+                <button type="button" class="btn btn-secondary">
+                    <img src="../img/icones/el_shopping-cart.svg" alt="Icone du panier">
+                    Mon panier
+                </button>
+            </li>
+        </ol>
+    </nav>
+    <section class="first active">
+        <div class="info-section">
+            <h2 class="upper">Let's go PIXIES</h2>
+            <strong>La petite fée que tu peux emporter partout avec toi</strong>
+            <p>Occupes-toi de ta petite fée, regardes-là éclore et évoluer tout au long de sa vie !
+                Aides-la à decouvrir ses pouvoirs et entraines-la à les maitriser pour qu’elle devienne la fée la plus
+                talentueuse du monde des Pixies.
+            </p>
+            <strong>Ta pixies et toi vous pourrez :</strong>
+            <ul>
+                <li><img src="../img/icones/cross.svg" alt="">Partir à la recherche des trésors magiques</li>
+                <li><img src="../img/icones/cross.svg" alt="">Te faire pleins de nouveaux amis</li>
+                <li><img src="../img/icones/cross.svg" alt="">Découvrir l’univers magique de PixiTown</li>
+            </ul>
+            <strong>Et bien plus encore !</strong>
+            <button type="button" class="btn btn-primary discover">Découvrir Pixie</button>
         </div>
-        <script src="../js/core.js"></script>
-    </body>
+        <div class="image-section">
+            <img src="../img/img%20png%20x1/pixies-bleu-accueil.png" alt="Pixie Bleu">
+            <div class="ellipse"></div>
+            <div class="ellipse"></div>
+        </div>
+    </section>
+    <section class="hidden second">
+        <div class="image-section">
+            <img src="../img/img%20png%20x1/pixies-rose.png" alt="">
+        </div>
+        <div class="info-section">
+            <h2 class="info-title">Glisse ta souris de droite à gauche pour découvrir le jeu</h2>
+            <img id="mouse" src="../img/icones/bi_mouse.svg" alt="" width="34px" height="54px">
+            <div class="description-section hidden" data-value="20">
+                <img src="../img/img%20png%20x1/pixies-rose.png" alt="">
+                <div class="desc-container">
+                    <div class="desc-img">
+                        <img src="../img/img%20png%20x1/image-magie.png" alt="">
+                    </div>
+                    <div class="desc">
+                        <div class="desc-icon">
+                            <img src="../img/icones/open-book.svg" alt="">
+                        </div>
+                        <div class="desc-text">
+                            <h3>Va à l'école de magie</h3>
+                            <p>Inscris ta pixie à l’école de magie pour devenir la meilleure pixie, tu pourras lui apprendre
+                                plein d’enchantements qui épateront tes amis !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description-section hidden" data-value="40">
+                <img src="../img/img%20png%20x1/pixies-rose.png" alt="">
+                <div class="desc-container">
+                    <div class="desc-img">
+                        <img src="../img/img%20png%20x1/image-amis.png" alt="">
+                    </div>
+                    <div class="desc">
+                        <div class="desc-icon">
+                            <img src="../img/icones/happy.svg" alt="">
+                        </div>
+                        <div class="desc-text">
+                            <h3>Rejoins tes amis</h3>
+                            <p>Rejoins d’autres pixie pour t’amuser, rigoler et découvrir plein de mini-jeux exclusifs !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description-section hidden" data-value="60">
+                <img src="../img/img%20png%20x1/pixies-rose.png" alt="">
+                <div class="desc-container">
+                    <div class="desc-img">
+                        <img src="../img/img%20png%20x1/image-aventure.png" alt="">
+                    </div>
+                    <div class="desc">
+                        <div class="desc-icon">
+                            <img src="../img/icones/open-door.svg" alt="">
+                        </div>
+                        <div class="desc-text">
+                            <h3>Pars à l’aventure</h3>
+                            <p>Explore plus de 30 lieux et débloque de nouvelles tenues pour être encore plus stylé!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description-section hidden" data-value="80">
+                <img src="../img/img%20png%20x1/pixies-rose.png" alt="">
+                <div class="desc-container">
+                    <div class="desc-img">
+                        <img src="../img/img%20png%20x1/image-tresor.png" alt="">
+                    </div>
+                    <div class="desc">
+                        <div class="desc-icon">
+                            <img src="../img/icones/chest.svg" alt="">
+                        </div>
+                        <div class="desc-text">
+                            <h3>Trouve des trésors</h3>
+                            <p>Collectionne des cartes et trouve des coffres remplis de trésor pour améliorer ta pixie.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="progress hidden">
+            <img src="../img/icones/pixi.svg" alt="">
+            <img src="../img/icones/open-book.svg" alt="">
+            <img src="../img/icones/happy.svg" alt="">
+            <img src="../img/icones/open-door.svg" alt="">
+            <img src="../img/icones/chest.svg" alt="">
+            <img src="../img/img%20png%20x1/pixies-rose.png" alt="">
+            <progress value="20" max="100"></progress>
+        </div>
+    </section>
+    <section class="hidden third">
+        <div class="image-section">
+            <img src="../img/img%20png%20x1/pixies-blue-fairy.png" alt="">
+            <img src="../img/img%20png%20x1/pixies-rose.png" alt="">
+            <img src="../img/img%20png%20x1/pixies-wonder-lavender.png" alt="">
+        </div>
+        <div class="info-section">
+            <strong class="text-big">Découvre nos différents motifs !</strong>
+            <button type="button" class="btn btn-lg btn-primary inline perso">Personnalise Pixie</button>
+        </div>
+    </section>
+    <section class="hidden fourth">
+        <h2>Personnalise ta Pixie !</h2>
+        <div class="info-section">
+            <div class="item first active">
+                <p>Magic</p>
+                <p>White</p>
+                <img src="../img/img%20png%20x1/pixies-magic-white.png" alt="">
+                <div class="card">
+                    <h4>Choisis ta couleur !</h4>
+                    <dl>
+                        <dt>Blanc :</dt>
+                        <dd>
+                            <span class="ping white selectable"></span>
+                        </dd>
+                        <br>
+                        <dt>Bleu :</dt>
+                        <dd>
+                            <span class="ping blue"></span>
+                        </dd>
+                        <dd>
+                            <span class="ping lightblue"></span>
+                        </dd>
+                        <br>
+                        <dt>Rose :</dt>
+                        <dd>
+                            <span class="ping pink"></span>
+                        </dd>
+                        <dd>
+                            <span class="ping lightpink"></span>
+                        </dd>
+                        <br>
+                        <dt>Vert :</dt>
+                        <dd>
+                            <span class="ping green"></span>
+                        </dd>
+                        <br>
+                        <dt>Violet :</dt>
+                        <dd>
+                            <span class="ping purple"></span>
+                        </dd>
+                        <dd>
+                            <span class="ping lightpurple"></span>
+                        </dd>
+                    </dl>
+                    <hr>
+                    <p class="price">49,99€</p>
+                    <button type="button" class="btn btn-primary">Ajouter à mon panier</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="../js/core.js"></script>
+</body>
 </html>
