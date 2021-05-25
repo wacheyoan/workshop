@@ -1,0 +1,59 @@
+.progress {
+  width: 80%;
+  position: relative;
+}
+.progress img {
+  width: 76px;
+  height: 75px;
+  position: absolute;
+}
+.progress img:first-child {
+  bottom: -25px;
+  left: -75px;
+}
+.progress img:nth-child(2) {
+  top: -75px;
+  left: 20%;
+  transform: translateX(-40px);
+}
+.progress img:nth-child(3) {
+  top: -75px;
+  left: 40%;
+  transform: translateX(-40px);
+}
+.progress img:nth-child(4) {
+  top: -75px;
+  left: 60%;
+  transform: translateX(-40px);
+}
+.progress img:nth-child(5) {
+  top: -75px;
+  left: 80%;
+  transform: translateX(-40px);
+}
+.progress img:last-of-type {
+  right: -75px;
+  bottom: -25px;
+  transform: translateX(-40px);
+}
+
+progress {
+  background: var(--white);
+  width: 100%;
+  border: 0;
+  border-radius: 60px;
+}
+progress::-moz-progress-bar {
+  background: var(--pink);
+  border-radius: 60px;
+}
+progress::-webkit-progress-bar {
+  background: transparent;
+  border-radius: 60px;
+}
+progress::-webkit-progress-value {
+  background: var(--pink);
+  border-radius: 60px;
+}
+
+/*# sourceMappingURL=progress.css.map */

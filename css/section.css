@@ -1,0 +1,191 @@
+section.first .image-section > .ellipse:first-of-type {
+  left: -25%;
+  bottom: 8.33%;
+  width: 83px;
+  height: 83px;
+  border: 2px solid var(--pink);
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+section.first .image-section > .ellipse:nth-of-type(2) {
+  right: -15%;
+  top: -10%;
+  width: 167px;
+  height: 167px;
+  border: 2px solid var(--light-purple);
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+section.first .image-section > .trait:nth-of-type(3) {
+  position: absolute;
+  top: -10%;
+  left: 24%;
+  width: 5px;
+  height: 44px;
+  background: var(--light-pink);
+  border-radius: 50px;
+  transform: rotate(-27.28deg);
+}
+section.first .image-section > .trait:nth-of-type(4) {
+  position: absolute;
+  top: -10%;
+  right: 50%;
+  width: 7px;
+  height: 28px;
+  background: var(--light-purple);
+  border-radius: 50px;
+  transform: rotate(22.63deg);
+}
+section.first .image-section > .trait:nth-of-type(5) {
+  position: absolute;
+  top: -8%;
+  right: 32%;
+  width: 6px;
+  height: 34px;
+  background: var(--light-pink);
+  border-radius: 50px;
+  transform: rotate(47.93deg);
+}
+section.first .info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+section.second .image-section > .ellipse:first-of-type, section.second .description-section > .ellipse:first-of-type, section.fourth .image-section > .ellipse:first-of-type, section.fourth .description-section > .ellipse:first-of-type {
+  bottom: 5%;
+  right: 22%;
+  width: 83px;
+  height: 83px;
+  border: 2px solid var(--pink);
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+section.second .image-section > .ellipse:nth-of-type(2), section.second .description-section > .ellipse:nth-of-type(2), section.fourth .image-section > .ellipse:nth-of-type(2), section.fourth .description-section > .ellipse:nth-of-type(2) {
+  top: 5%;
+  left: 11%;
+  width: 167px;
+  height: 167px;
+  border: 2px solid var(--light-purple);
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+section.second .image-section > .trait:nth-of-type(3), section.second .description-section > .trait:nth-of-type(3), section.fourth .image-section > .trait:nth-of-type(3), section.fourth .description-section > .trait:nth-of-type(3) {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 5px;
+  height: 29px;
+  background: var(--light-pink);
+  border-radius: 50px;
+  transform: matrix(-0.67, 0.74, 0.74, 0.67, 0, 0);
+}
+section.second .image-section > .trait:nth-of-type(4), section.second .description-section > .trait:nth-of-type(4), section.fourth .image-section > .trait:nth-of-type(4), section.fourth .description-section > .trait:nth-of-type(4) {
+  position: absolute;
+  top: -5%;
+  right: 55%;
+  width: 6px;
+  height: 24px;
+  background: var(--light-purple);
+  border-radius: 50px;
+  transform: matrix(-0.92, 0.38, 0.38, 0.92, 0, 0);
+}
+section.second .image-section > .trait:nth-of-type(5), section.second .description-section > .trait:nth-of-type(5), section.fourth .image-section > .trait:nth-of-type(5), section.fourth .description-section > .trait:nth-of-type(5) {
+  position: absolute;
+  top: -5%;
+  right: 40%;
+  width: 4px;
+  height: 38px;
+  background: var(--light-pink);
+  border-radius: 50px;
+  transform: matrix(-0.89, -0.46, -0.46, 0.89, 0, 0);
+}
+
+section.second.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 8% 8% 8%;
+}
+section.second.active > .info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+section.third.active {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 6% 6% 6%;
+}
+section.third.active img:nth-child(1) {
+  width: 417px;
+  height: 507px;
+  transform: rotate(-20deg);
+  position: absolute;
+  right: 68%;
+  top: 50px;
+}
+section.third.active img:nth-child(3) {
+  width: 417px;
+  height: 507px;
+  transform: scaleX(-1) rotate(-20deg);
+  position: absolute;
+  left: 73%;
+  top: 25px;
+}
+section.third.active img:nth-child(2) {
+  width: 537px;
+  height: 440px;
+}
+section.third.active .image-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+section.third.active .info-section {
+  position: absolute;
+  bottom: 25%;
+  left: 6%;
+  width: 100%;
+  display: flex;
+}
+section.third.active .info-section .btn {
+  margin-left: 10%;
+}
+
+section.fourth.active {
+  margin: 2%;
+}
+section.fourth.active .info-section .item.active {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  gap: 150px;
+}
+section.fourth.active .info-section .btn {
+  float: right;
+  margin-top: 98px;
+}
+section.fourth.active .info-section p {
+  color: var(--purple);
+  font-size: 90px;
+  position: absolute;
+  font-family: Teko-Semi, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+section.fourth.active .info-section p:first-child {
+  left: 0;
+  top: 169px;
+}
+section.fourth.active .info-section p:nth-child(2) {
+  left: 10%;
+  top: 270px;
+}
+
+/*# sourceMappingURL=section.css.map */

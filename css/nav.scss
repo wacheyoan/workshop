@@ -1,0 +1,35 @@
+nav {
+  a {
+    font-family: Teko-Semi, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 140%;
+    color: var(--purple);
+  }
+  margin: 6% 6% 0 6%;
+  >ol {
+    display: flex;
+    gap: 35px;
+    >li {
+      &:not(:first-child) {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      &:first-child {
+        margin-right: auto;
+      }
+    }
+  }
+}
+.active-menu {
+  &::after {
+    content: "";
+    width: 31px;
+    height: 3px;
+    background: var(--purple);
+    position: absolute;
+    bottom: 17px;
+  }
+}

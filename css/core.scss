@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "Teko-Semi";
+  src: url("../fonts/Teko-SemiBold.ttf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url('../fonts/OpenSans-SemiBold.ttf');
+}
+@font-face {
+  font-family: "OpenSansBold";
+  src: url('../fonts/OpenSans-Bold.ttf');
+}
+@keyframes mouse {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotateZ(45deg) translate(50px);
+  }
+  100% {
+    transform: rotateZ(-45deg) translateX(-50px);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+:root {
+  --black: #1B1C1D;
+  --white: #FFFFFF;
+  --grey: #F7F7F7;
+  --purple: #342771;
+  --pink: #CE00D2;
+  --light-purple: #737DFE;
+  --light-pink: #FFCAC9;
+  --gradient: linear-gradient(107.6deg, #737DFE 5.21%, #FFCAC9 90.25%);
+  --iris-blue: #13E2DA;
+  --iris-red: #F40076;
+  --iris-purple: rgba(115, 125, 254, 0.26);
+  --iris-beige: rgba(239, 255, 206, 0.5);
+  --iris-magenta: rgba(206, 0, 210, 0.5);
+  --iris-cyan: rgba(19, 226, 218, 0.4);
+}
+@import "progress";
+@import "section";
+@import "button";
+@import "card";
+@import "nav";
+
+body {
+  background: #FFFFFF;
+  opacity: 0.9;
+  backdrop-filter: blur(80px);
+  overflow: hidden;
+  height: 100vh;
+  cursor: url("../img/icones/Cursor/Default.svg"), auto;
+  * {
+    color: var(--black);
+    font-family: OpenSans, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+a {
+  text-decoration: none;
+  &:hover {
+    cursor: url("../img/icones/Cursor/Pointer.svg"), auto;
+  }
+}
+p {
+  max-width: 700px;
+}
+strong {
+  &:not(.black) {
+    font-family: Teko-Semi, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 140%;
+    color: var(--purple);
+  }
+}
+h2 {
+  font-family: Teko-Semi, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  color: var(--purple);
+  font-size: 50px;
+}
+h3 {
+  font-family: Teko-Semi,sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+  color: var(--purple);
+}
+h4 {
+  margin-bottom: 21px;
+}
+ul {
+  li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+dt {
+  display: inline-block;
+  height: 44px;
+  width: 75px;
+}
+dl {
+  margin-left: 5%;
+  position: static;
+}
+dd {
+  display: inline;
+  margin-left: 11px;
+  span {
+    display: inline-block;
+  }
+}
+hr {
+  background: var(--purple);
+  height: 2px;
+}
+
+#mouse.active {
+  animation: mouse 1.5s;
+}
+
+.price {
+  font-family: Teko-Semi,sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+  color: var(--purple);
+  margin-top: 21px;
+}
+.main-container {
+  position: relative;
+  height: 100%;
+  >.ellipse {
+    &:first-child {
+      left: 336px;
+      top: 540px;
+      background: var(--pink);
+      transform: rotate(-157.75deg);
+      filter: blur(185px);
+    }
+    &:nth-child(2) {
+      left: 10%;
+      top: 90%;
+      background: var(--iris-blue);
+      filter: blur(254px);
+    }
+    &:nth-child(3) {
+      left: 264px;
+      top: 172px;
+      background: var(--iris-blue);
+      filter: blur(254px);
+    }
+    &:nth-child(4) {
+      left: 694.22px;
+      top: 876.48px;
+      background: var(--iris-red);
+      transform: rotate(-75deg);
+      filter: blur(185px);
+    }
+    &:nth-child(5) {
+      left: 888px;
+      top: 147px;
+      background: var(--iris-blue);
+      filter: blur(254px);
+    }
+    &:nth-child(6) {
+      left: 0;
+      top: 0.03px;
+      background: var(--pink);
+      filter: blur(185px);
+    }
+  }
+}
+.ellipse {
+  position: absolute;
+  z-index: -1;
+  width: 250px;
+  height: 100px;
+}
+.ping {
+  &:hover {
+    cursor: url("../img/icones/Cursor/Pointer.svg"), auto;
+  }
+}
+.hidden {
+  display: none;
+}
+.upper {
+  text-transform: uppercase;
+}
+.text-big {
+  font-size: 50px !important;
+  line-height: 70px !important;
+}
+.inline {
+  display: inline;
+}
+.big-purple {
+  font-size: 50px !important;
+  color: var(--purple);
+}
+.black {
+  font-family: OpenSansBold,sans-serif;
+  color: var(--black);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+}

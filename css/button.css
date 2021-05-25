@@ -1,0 +1,28 @@
+.btn-lg {
+  width: 182px;
+  height: 55px;
+}
+
+.btn-primary {
+  background: var(--purple);
+  color: var(--white);
+  align-self: baseline;
+}
+.btn-primary:hover {
+  background: var(--gradient);
+}
+.btn-primary:focus {
+  box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.15), inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary {
+  background: var(--white);
+}
+.btn-secondary:hover {
+  background: var(--light-pink);
+}
+.btn-secondary:focus {
+  box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.15), inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*# sourceMappingURL=button.css.map */
