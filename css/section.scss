@@ -137,6 +137,15 @@ section.second.active {
     align-items: center;
     margin-bottom: 150px;
   }
+  >.image-section:not(.hidden){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    >img{
+      width: 80%;
+    }
+  }
 }
 section.third.active {
   img {

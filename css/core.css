@@ -229,6 +229,15 @@ section.second.active > .info-section {
   align-items: center;
   margin-bottom: 150px;
 }
+section.second.active > .image-section:not(.hidden) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+}
+section.second.active > .image-section:not(.hidden) > img {
+  width: 80%;
+}
 
 section.third.active {
   display: flex;
@@ -584,44 +593,58 @@ hr {
 }
 
 .main-container {
-  position: relative;
   height: 100%;
 }
+.main-container > .ellipse {
+  opacity: 0.3;
+}
 .main-container > .ellipse:first-child {
-  left: 336px;
-  top: 540px;
+  left: 23%;
+  top: 53%;
+  width: 744px;
+  height: 323px;
   background: var(--pink);
   transform: rotate(-157.75deg);
   filter: blur(185px);
 }
 .main-container > .ellipse:nth-child(2) {
-  left: 10%;
-  top: 90%;
+  left: 3%;
+  top: 49%;
+  width: 550px;
+  height: 550px;
   background: var(--iris-blue);
   filter: blur(254px);
 }
 .main-container > .ellipse:nth-child(3) {
-  left: 264px;
-  top: 172px;
+  left: 18.33%;
+  top: 12%;
+  width: 654px;
+  height: 654px;
   background: var(--iris-blue);
   filter: blur(254px);
 }
 .main-container > .ellipse:nth-child(4) {
-  left: 694.22px;
-  top: 876.48px;
+  left: 48%;
+  top: 34%;
+  width: 540px;
+  height: 626px;
   background: var(--iris-red);
   transform: rotate(-75deg);
   filter: blur(185px);
 }
 .main-container > .ellipse:nth-child(5) {
-  left: 888px;
-  top: 147px;
+  left: 62%;
+  top: 14.35%;
+  width: 406px;
+  height: 406px;
   background: var(--iris-blue);
   filter: blur(254px);
 }
 .main-container > .ellipse:nth-child(6) {
   left: 0;
-  top: 0.03px;
+  top: 0;
+  width: 540px;
+  height: 626px;
   background: var(--pink);
   filter: blur(185px);
 }
@@ -629,8 +652,6 @@ hr {
 .ellipse {
   position: absolute;
   z-index: -1;
-  width: 250px;
-  height: 100px;
 }
 
 .ping:hover {
