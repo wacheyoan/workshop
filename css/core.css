@@ -157,6 +157,102 @@ section.first .image-section > .ellipse:nth-of-type(2){
     border-radius: 50%;
 }
 
+section.first .image-section > .trait:nth-of-type(3){
+    position: absolute;
+    top: -10%;
+    left: 24%;
+    width: 5px;
+    height: 44px;
+    background: var(--light-pink);
+    border-radius: 50px;
+    transform: rotate(-27.28deg);
+}
+
+section.first .image-section > .trait:nth-of-type(4){
+    position: absolute;
+    top: -10%;
+    right: 50%;
+    width: 7px;
+    height: 28px;
+    background: var(--light-purple);
+    border-radius: 50px;
+    transform: rotate(22.63deg);
+}
+
+section.first .image-section > .trait:nth-of-type(5){
+    position: absolute;
+    top: -8%;
+    right: 32%;
+    width: 6px;
+    height: 34px;
+    background: var(--light-pink);
+    border-radius: 50px;
+    transform: rotate(47.93deg);
+}
+
+section.second .image-section > .ellipse:first-of-type,
+section.fourth .image-section > .ellipse:first-of-type,
+section.second .description-section > .ellipse:first-of-type{
+    bottom: 5%;
+    right:22%;
+    width: 83px;
+    height: 83px;
+    border: 2px solid var(--pink);
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+section.second .image-section > .ellipse:nth-of-type(2),
+section.fourth .image-section > .ellipse:nth-of-type(2),
+section.second .description-section > .ellipse:nth-of-type(2){
+    top: 5%;
+    left: 11%;
+    width: 167px;
+    height: 167px;
+    border: 2px solid var(--light-purple);
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+section.second .image-section > .trait:nth-of-type(3),
+section.fourth .image-section > .trait:nth-of-type(3),
+section.second .description-section > .trait:nth-of-type(3){
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 5px;
+    height: 29px;
+    background: var(--light-pink);
+    border-radius: 50px;
+    transform: matrix(-0.67, 0.74, 0.74, 0.67, 0, 0);
+}
+
+section.second .image-section > .trait:nth-of-type(4),
+section.fourth .image-section > .trait:nth-of-type(4),
+section.second .description-section > .trait:nth-of-type(4){
+    position: absolute;
+    top: -5%;
+    right: 55%;
+    width: 6px;
+    height: 24px;
+    background: var(--light-purple);
+    border-radius: 50px;
+    transform: matrix(-0.92, 0.38, 0.38, 0.92, 0, 0);
+}
+
+section.second .image-section > .trait:nth-of-type(5),
+section.fourth .image-section > .trait:nth-of-type(5),
+section.second .description-section > .trait:nth-of-type(5){
+    position: absolute;
+    top: -5%;
+    right: 40%;
+    width: 4px;
+    height: 38px;
+    background: var(--light-pink);
+    border-radius: 50px;
+    transform: matrix(-0.89, -0.46, -0.46, 0.89, 0, 0);
+}
+
 a{
     text-decoration: none;
 }
@@ -244,7 +340,7 @@ section.second.active{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 6% 6% 6%;
+    margin: 0 8% 8% 8%;
 }
 section.second.active > .info-section{
     display: flex;
@@ -293,6 +389,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .desc-container{

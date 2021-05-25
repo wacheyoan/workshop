@@ -362,10 +362,6 @@ function pingSelectable(e) {
 
 }
 
-
-
-
-
 function move(value, increase = true) {
     let progress = document.querySelector("progress");
     let width = value;
@@ -398,3 +394,4 @@ function move(value, increase = true) {
 
     }
 }
+
