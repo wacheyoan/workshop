@@ -75,7 +75,16 @@ function showPersoPage(e) {
 
     document.querySelector('nav li:nth-child(4)').classList.add('active-menu');
 
+    moveSelectable();
 
+}
+
+function moveSelectable(){
+    let selected = document.querySelector('.selected');
+    let selectable = document.querySelector('.selectable');
+
+    selectable.style.top = (selected.offsetTop - 2)+"px";
+    selectable.style.left = (selected.offsetLeft - 11) +"px";
 }
 
 function hideActivePage() {
@@ -238,9 +247,8 @@ const swipe = new Swipe(elem, {
 });
 
 let afterEvent = swipe.addEventListener("after", direction => {
-    swipeGame(direction)
+    swipeGame(direction);
 });
-
 
 function swipeGame(direction) {
     direction === "right" ? swipeRight() : swipeLeft();
@@ -273,7 +281,7 @@ function swipeRight() {
 
     desc.classList.remove('hidden');
     desc.classList.add('active');
-    document.querySelector('progress').value = desc.dataset.value;
+    move(desc.dataset.value,false);
 
 }
 
@@ -305,7 +313,7 @@ function swipeLeft() {
 
     desc.classList.remove('hidden');
     desc.classList.add('active');
-    document.querySelector('progress').value = desc.dataset.value;
+    move(desc.dataset.value);
 
     document.querySelector('.progress').classList.remove('hidden')
 
@@ -319,17 +327,74 @@ for (let ping of pings) {
 function pingSelectable(e) {
     let elem = e.target;
     let itemNode = document.querySelector('.item');
-    document.querySelector('.selectable').classList.remove('selectable');
 
     let color = [...elem.classList].find(e => {
         return e !== 'ping' && e !== "selectable"
     });
 
     if (undefined !== items[color]) {
+        document.querySelector('.selected').classList.remove('selected');
+
         let ps = items[color].title.split(' ');
         itemNode.querySelector('p:first-child').innerHTML = ps[0];
         itemNode.querySelector('p:nth-child(2)').innerHTML = ps[1];
         itemNode.querySelector('img').src = "../img/img%20png%20x1/" + items[color].image + ".png"
+        elem.classList.add('selected');
+
+        moveSelectable()
+
+    }else{
+        for(let it in items){
+            let elem =  document.querySelector('.'+it);
+
+            if(!elem.classList.contains('selected')){
+                elem.classList.add('change');
+            }
+        }
+
+        setTimeout(function (){
+            document.querySelectorAll('.change').forEach(function (e){
+                e.classList.remove('change');
+            })
+        },1000);
     }
-    elem.classList.add('selectable');
+
+
+}
+
+
+
+
+
+function move(value, increase = true) {
+    let progress = document.querySelector("progress");
+    let width = value;
+
+
+    if(increase){
+        width = +value - 20;
+    }else{
+        width = +value + 20;
+    }
+
+    let id = setInterval(frame, 10);
+
+    function frame() {
+        if(increase){
+            if (width >= value) {
+                clearInterval(id);
+            } else {
+                width++;
+                progress.value = width
+            }
+        }else{
+            if (width <= value) {
+                clearInterval(id);
+            } else {
+                width--;
+                progress.value = width
+            }
+        }
+
+    }
 }
