@@ -271,6 +271,11 @@ hr {
     a{
       text-align: center;
     }
+    .active-menu::after{
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 14px;
+    }
   }
 
   section.first.active{

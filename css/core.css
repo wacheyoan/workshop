@@ -729,6 +729,11 @@ hr {
   nav a {
     text-align: center;
   }
+  nav .active-menu::after {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 14px;
+  }
 
   section.first.active > .image-section {
     display: none;
