@@ -18,7 +18,7 @@ class Swipe {
     }
 
     static position(e) {
-        if(e instanceof TouchEvent){
+        if(window.TouchEvent && e instanceof TouchEvent){
             return {x: e.changedTouches[0].clientX,y:e.changedTouches[0].clientY}
         }
         return {x: e.pageX, y: e.pageY};

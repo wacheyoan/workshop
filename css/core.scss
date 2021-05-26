@@ -248,7 +248,7 @@ hr {
   height: 25px;
   position: absolute;
   top: 8px;
-  left: 25px;
+  right: 25px;
   display: none;
   z-index: 100;
 }
@@ -279,6 +279,7 @@ hr {
   }
 
   section.first.active{
+    height: 70%;
     >.image-section{
       display: none;
     }
@@ -299,6 +300,13 @@ hr {
           margin-top: 15%;
         }
       }
+    }
+
+  }
+
+  .desc-container{
+    img{
+      transform: rotate(0deg) !important;
     }
   }
 
@@ -350,6 +358,14 @@ hr {
   .desc-icon{
     img{
       display: none;
+    }
+  }
+  .desc-text{
+    h3{
+      text-align: center;
+    }
+    p{
+      text-align: justify;
     }
   }
   .progress{
@@ -405,6 +421,8 @@ hr {
   }
   section.second.active{
     margin: 0 15% 0 15%;
+    justify-content: center;
+    gap: 50px;
     >.image-section{
       margin-top: 15%;
     }
@@ -418,7 +436,33 @@ hr {
     left: 25px;
   }
   section.first.active {
-    margin: 0 15% 0 15%;
+    height: 100%;
+  }
+
+  .card{
+    width: 80%;
+  }
+
+  .progress{
+    img{
+      width: 50px;
+      height: 50px;
+
+    }
+    img:first-child{
+      bottom: -15px;
+      left: -50px;
+    }
+    img:last-of-type{
+      right: -50px;
+      bottom: -15px;
+      transform: translateX(0);
+    }
+    img:nth-child(2),img:nth-child(3),img:nth-child(4),img:nth-child(5){
+      top: -50px;
+      transform: translateX(-30px);
+    }
+
   }
 
 }

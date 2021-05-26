@@ -12,10 +12,8 @@ for (let ping of pings) {
     ping.addEventListener('click', pingSelectable);
 }
 
-//CODE FOR ANIMATION
 const elem = document.querySelector('section.second');
 
-//SWIPE INITIALIZATION
 const swipe = new Swipe(elem, {
     corners: true,
     minDistance: 50
@@ -23,6 +21,25 @@ const swipe = new Swipe(elem, {
 swipe.addEventListener("after", direction => {
     swipeGame(direction);
 });
+
+//rip
+window.addEventListener("resize,zoom", function (e){
+    let menu = document.querySelector('.menu');
+    let nav = document.querySelector('nav');
+    if(screen.width > 550){
+        nav.style.display = "block";
+        menu.style.display = "none";
+    }else{
+        nav.style.display = "none";
+        menu.style.display = "block";
+    }
+
+    moveSelectable()
+});
+
+document.querySelectorAll('section:not(.hidden)  .ellipse, section:not(.hidden) .trait').forEach(function (e){
+    new HoverButton(e);
+})
 
 
 function showDiscoveringPage(e) {
@@ -37,6 +54,12 @@ function showDiscoveringPage(e) {
     document.querySelector('nav li:nth-child(3)').classList.add('active-menu');
 
     animateMouse();
+
+    document.querySelectorAll('section.second > .image-section > .ellipse,section.second > .image-section > .trait').forEach(function (e) {
+        new HoverButton(e)
+    })
+
+
 }
 
 function showDiffMotifpage() {
@@ -58,6 +81,10 @@ function showPersoPage(e) {
     let persoPage = document.getElementsByClassName('fourth')[0];
     persoPage.classList.remove('hidden');
     persoPage.classList.add('active');
+    persoPage.querySelectorAll('.ellipse,.trait').forEach(function (e){
+        new HoverButton(e)
+    })
+
 
     document.querySelector('nav li:nth-child(4)').classList.add('active-menu');
 
@@ -87,7 +114,17 @@ function animateMouse() {
 }
 
 function swipeGame(direction) {
-    direction === "right" ? swipeRight() : swipeLeft();
+
+    switch (direction){
+        case "right":
+            swipeRight();
+            return;
+        case "left" :
+            swipeLeft();
+            return;
+        default:
+            return;;
+    }
 }
 
 function swipeRight() {
@@ -117,6 +154,11 @@ function swipeRight() {
 
     desc.classList.remove('hidden');
     desc.classList.add('active');
+
+    desc.querySelectorAll('.ellipse,.trait').forEach(function (e){
+        new HoverButton(e)
+    })
+
     move(desc.dataset.value,false);
 
 }
@@ -149,6 +191,10 @@ function swipeLeft() {
 
     desc.classList.remove('hidden');
     desc.classList.add('active');
+    desc.querySelectorAll('.ellipse,.trait').forEach(function (e){
+        new HoverButton(e)
+    })
+
     move(desc.dataset.value);
 
     document.querySelector('.progress').classList.remove('hidden')
@@ -166,21 +212,6 @@ function hideMobileMenu(){
     }
 
 }
-
-window.addEventListener("resize", function (e){
-    let menu = document.querySelector('.menu');
-    let nav = document.querySelector('nav');
-    if(screen.width > 550){
-        nav.style.display = "block";
-        menu.style.display = "none";
-    }else{
-        nav.style.display = "none";
-        menu.style.display = "block";
-    }
-
-    moveSelectable()
-});
-
 
 function pingSelectable(e) {
     let elem = e.target;
@@ -267,4 +298,9 @@ cross.addEventListener('click',function (){
     document.querySelector('nav').style.display = "none";
     document.querySelector('.menu').style.display = "block";
 })
+
+
+
+
+
 
