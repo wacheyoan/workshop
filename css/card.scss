@@ -3,7 +3,6 @@
   background: var(--white);
   border-radius: 20px;
   padding: 35px 25px;
-  width: 435px;
   span.ping {
     width: 25px;
     height: 25px;
@@ -60,4 +59,9 @@
     top: -2.5px;
     animation: fade 1s;
   }
+}
+@media screen and (min-width: 958px) {
+.card{
+  width: 435px;
+}
 }

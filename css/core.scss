@@ -156,8 +156,8 @@ hr {
     &:first-child {
       left: 23%;
       top: 53%;
-      width: 744px;
-      height: 323px;
+      width: 52%;
+      height: 32%;
       background: var(--pink);
       transform: rotate(-157.75deg);
       filter: blur(185px);
@@ -165,24 +165,24 @@ hr {
     &:nth-child(2) {
       left: 3%;
       top: 49%;
-      width: 550px;
-      height: 550px;
+      width: 38%;
+      height: 54%;
       background: var(--iris-blue);
       filter: blur(254px);
     }
     &:nth-child(3) {
       left: 18.33%;
       top: 12%;
-      width: 654px;
-      height: 654px;
+      width: 45%;
+      height: 64%;
       background: var(--iris-blue);
       filter: blur(254px);
     }
     &:nth-child(4) {
       left: 48%;
       top: 34%;
-      width: 540px;
-      height: 626px;
+      width: 38%;
+      height: 61%;
       background: var(--iris-red);
       transform: rotate(-75deg);
       filter: blur(185px);
@@ -190,16 +190,16 @@ hr {
     &:nth-child(5) {
       left: 62%;
       top: 14.35%;
-      width: 406px;
-      height: 406px;
+      width: 28%;
+      height: 40%;
       background: var(--iris-blue);
       filter: blur(254px);
     }
     &:nth-child(6) {
       left: 0;
       top: 0;
-      width: 540px;
-      height: 626px;
+      width: 37.5%;
+      height: 61%;
       background: var(--pink);
       filter: blur(185px);
     }
@@ -215,7 +215,7 @@ hr {
   }
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 .upper {
   text-transform: uppercase;
@@ -237,4 +237,183 @@ hr {
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
+}
+
+.cross{
+  display: none;
+}
+
+.menu{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 8px;
+  left: 25px;
+  display: none;
+  z-index: 100;
+}
+
+.info-title{
+  text-align: center;
+}
+
+@media screen and (max-width: 957px) {
+  .logo{
+    display: none;
+  }
+  nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav{
+    a{
+      text-align: center;
+    }
+  }
+
+  section.first.active{
+    >.image-section{
+      display: none;
+    }
+    >.info-section{
+      *{
+        text-align: justify;
+      }
+    }
+  }
+
+  section.second.active{
+    >.info-section{
+      >.description-section.active{
+        >.image-section{
+          display: none;
+        }
+        >.desc-container{
+          margin-top: 15%;
+        }
+      }
+    }
+  }
+
+  section.third.active{
+    >.info-section{
+      flex-direction: column;
+    }
+    .btn.inline{
+      margin: 0;
+    }
+    >.image-section{
+      margin-top: 100px;
+    }
+  }
+
+  section.fourth.active{
+    >.info-section {
+      >.item.active{
+        gap: 0;
+      }
+    }
+    >.image-section{
+      max-width: 435px;
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body{
+    overflow-x: hidden !important;
+  }
+  section.fourth.active{
+    >.info-section {
+      >.item.active{
+        flex-direction: column;
+      }
+    }
+    h2{
+      margin-left: 15%;
+    }
+  }
+  h2{
+    font-size: 32px;
+  }
+  .desc-icon{
+    img{
+      display: none;
+    }
+  }
+  .progress{
+    bottom: 9%;
+  }
+  h3.big-purple{
+    font-size: 20px !important;
+  }
+  .menu{
+    display: block;
+  }
+  body{
+    overflow: auto;
+  }
+  nav{
+    z-index: 100;
+    display: none;
+    position: absolute;
+    top: 0;
+    background: white;
+    width: 90%;
+    height: 90%;
+    li:nth-child(3) a{
+      &{
+        font-size: 0;
+      }
+      &::after{
+        content: "Découvrir";
+        font-size: 22px;
+      }
+    }
+    li:nth-child(4) a{
+      &{
+        font-size: 0;
+      }
+      &::after{
+        content: "Personnalise";
+        font-size: 22px;
+      }
+    }
+    li:nth-child(5) button{
+      font-size: 0;
+    }
+    ol{
+      flex-direction: column;
+      align-items: center;
+    }
+    .active-menu {
+      &::after {
+        bottom: 0;
+      }
+    }
+  }
+  section.second.active{
+    margin: 0 15% 0 15%;
+    >.image-section{
+      margin-top: 15%;
+    }
+  }
+  .cross{
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 25px;
+    left: 25px;
+  }
+  section.first.active {
+    margin: 0 15% 0 15%;
+  }
+
 }

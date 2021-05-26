@@ -28,6 +28,7 @@ swipe.addEventListener("after", direction => {
 function showDiscoveringPage(e) {
     e.preventDefault();
     hideActivePage();
+    hideMobileMenu();
 
     let discoverPage = document.getElementsByClassName('second')[0];
     discoverPage.classList.remove('hidden');
@@ -40,6 +41,7 @@ function showDiscoveringPage(e) {
 
 function showDiffMotifpage() {
     hideActivePage();
+    hideMobileMenu();
     let motifspage = document.getElementsByClassName('third')[0];
     motifspage.classList.remove('hidden');
     motifspage.classList.add('active');
@@ -51,6 +53,7 @@ function showDiffMotifpage() {
 function showPersoPage(e) {
     e.preventDefault();
     hideActivePage();
+    hideMobileMenu();
 
     let persoPage = document.getElementsByClassName('fourth')[0];
     persoPage.classList.remove('hidden');
@@ -152,6 +155,33 @@ function swipeLeft() {
 
 }
 
+function hideMobileMenu(){
+    let cross = document.querySelector('.cross');
+    cross.style.display = "none";
+    if(screen.width < 550){
+        document.querySelector('nav').style.display = "none";
+        document.querySelector('.menu').style.display = "block";
+    }else{
+        document.querySelector('nav').style.display = "block";
+    }
+
+}
+
+window.addEventListener("resize", function (e){
+    let menu = document.querySelector('.menu');
+    let nav = document.querySelector('nav');
+    if(screen.width > 550){
+        nav.style.display = "block";
+        menu.style.display = "none";
+    }else{
+        nav.style.display = "none";
+        menu.style.display = "block";
+    }
+
+    moveSelectable()
+});
+
+
 function pingSelectable(e) {
     let elem = e.target;
     let itemNode = document.querySelector('.item');
@@ -222,4 +252,19 @@ function move(value, increase = true) {
 
     }
 }
+
+let menu = document.querySelector('.menu');
+menu.addEventListener('click',function (){
+    menu.style.display = "none";
+    document.querySelector('nav').style.display = "flex";
+    document.querySelector('.cross').style.display = "block";
+
+})
+
+let cross = document.querySelector('.cross');
+cross.addEventListener('click',function (){
+    cross.style.display = "none";
+    document.querySelector('nav').style.display = "none";
+    document.querySelector('.menu').style.display = "block";
+})
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Teko-Semi";
   src: url("../fonts/Teko-SemiBold.ttf");
@@ -48,7 +49,8 @@
 
 .progress {
   width: 80%;
-  position: relative;
+  position: absolute;
+  bottom: 25%;
 }
 .progress img {
   width: 76px;
@@ -82,7 +84,7 @@
 .progress img:last-of-type {
   right: -75px;
   bottom: -25px;
-  transform: translateX(-40px);
+  transform: translateX(-7px);
 }
 
 progress {
@@ -222,6 +224,8 @@ section.second.active {
   flex-direction: column;
   align-items: center;
   margin: 0 8% 8% 8%;
+  position: relative;
+  height: 100%;
 }
 section.second.active > .info-section {
   display: flex;
@@ -245,25 +249,21 @@ section.third.active {
   flex-direction: column;
   margin: 0 6% 6% 6%;
 }
+section.third.active img {
+  width: 60%;
+  height: auto;
+}
 section.third.active img:nth-child(1) {
-  width: 417px;
-  height: 507px;
   transform: rotate(-20deg);
   position: absolute;
-  right: 68%;
+  right: 60%;
   top: 50px;
 }
 section.third.active img:nth-child(3) {
-  width: 417px;
-  height: 507px;
   transform: scaleX(-1) rotate(-20deg);
   position: absolute;
-  left: 73%;
+  left: 60%;
   top: 25px;
-}
-section.third.active img:nth-child(2) {
-  width: 537px;
-  height: 440px;
 }
 section.third.active .image-section {
   display: flex;
@@ -303,6 +303,7 @@ section.fourth.active .info-section p {
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
+  z-index: 99;
 }
 section.fourth.active .info-section p:first-child {
   left: 0;
@@ -318,6 +319,10 @@ section.fourth.active .info-section p:nth-child(2) {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+.description-section.active > .image-section img {
+  width: 100%;
+  height: auto;
 }
 
 .desc-container {
@@ -392,7 +397,6 @@ section.fourth.active .info-section p:nth-child(2) {
   background: var(--white);
   border-radius: 20px;
   padding: 35px 25px;
-  width: 435px;
 }
 .card span.ping {
   width: 25px;
@@ -451,6 +455,11 @@ section.fourth.active .info-section p:nth-child(2) {
   animation: fade 1s;
 }
 
+@media screen and (min-width: 958px) {
+  .card {
+    width: 435px;
+  }
+}
 nav {
   margin: 6% 6% 0 6%;
 }
@@ -601,8 +610,8 @@ hr {
 .main-container > .ellipse:first-child {
   left: 23%;
   top: 53%;
-  width: 744px;
-  height: 323px;
+  width: 52%;
+  height: 32%;
   background: var(--pink);
   transform: rotate(-157.75deg);
   filter: blur(185px);
@@ -610,24 +619,24 @@ hr {
 .main-container > .ellipse:nth-child(2) {
   left: 3%;
   top: 49%;
-  width: 550px;
-  height: 550px;
+  width: 38%;
+  height: 54%;
   background: var(--iris-blue);
   filter: blur(254px);
 }
 .main-container > .ellipse:nth-child(3) {
   left: 18.33%;
   top: 12%;
-  width: 654px;
-  height: 654px;
+  width: 45%;
+  height: 64%;
   background: var(--iris-blue);
   filter: blur(254px);
 }
 .main-container > .ellipse:nth-child(4) {
   left: 48%;
   top: 34%;
-  width: 540px;
-  height: 626px;
+  width: 38%;
+  height: 61%;
   background: var(--iris-red);
   transform: rotate(-75deg);
   filter: blur(185px);
@@ -635,16 +644,16 @@ hr {
 .main-container > .ellipse:nth-child(5) {
   left: 62%;
   top: 14.35%;
-  width: 406px;
-  height: 406px;
+  width: 28%;
+  height: 40%;
   background: var(--iris-blue);
   filter: blur(254px);
 }
 .main-container > .ellipse:nth-child(6) {
   left: 0;
   top: 0;
-  width: 540px;
-  height: 626px;
+  width: 37.5%;
+  height: 61%;
   background: var(--pink);
   filter: blur(185px);
 }
@@ -659,7 +668,7 @@ hr {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .upper {
@@ -686,6 +695,165 @@ hr {
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
+}
+
+.cross {
+  display: none;
+}
+
+.menu {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 8px;
+  left: 25px;
+  display: none;
+  z-index: 100;
+}
+
+.info-title {
+  text-align: center;
+}
+
+@media screen and (max-width: 957px) {
+  .logo {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav a {
+    text-align: center;
+  }
+
+  section.first.active > .image-section {
+    display: none;
+  }
+  section.first.active > .info-section * {
+    text-align: justify;
+  }
+
+  section.second.active > .info-section > .description-section.active > .image-section {
+    display: none;
+  }
+  section.second.active > .info-section > .description-section.active > .desc-container {
+    margin-top: 15%;
+  }
+
+  section.third.active > .info-section {
+    flex-direction: column;
+  }
+  section.third.active .btn.inline {
+    margin: 0;
+  }
+  section.third.active > .image-section {
+    margin-top: 100px;
+  }
+
+  section.fourth.active > .info-section > .item.active {
+    gap: 0;
+  }
+  section.fourth.active > .image-section {
+    max-width: 435px;
+  }
+  section.fourth.active img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  section.fourth.active > .info-section > .item.active {
+    flex-direction: column;
+  }
+  section.fourth.active h2 {
+    margin-left: 15%;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .desc-icon img {
+    display: none;
+  }
+
+  .progress {
+    bottom: 9%;
+  }
+
+  h3.big-purple {
+    font-size: 20px !important;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  body {
+    overflow: auto;
+  }
+
+  nav {
+    z-index: 100;
+    display: none;
+    position: absolute;
+    top: 0;
+    background: white;
+    width: 90%;
+    height: 90%;
+  }
+  nav li:nth-child(3) a {
+    font-size: 0;
+  }
+  nav li:nth-child(3) a::after {
+    content: "Découvrir";
+    font-size: 22px;
+  }
+  nav li:nth-child(4) a {
+    font-size: 0;
+  }
+  nav li:nth-child(4) a::after {
+    content: "Personnalise";
+    font-size: 22px;
+  }
+  nav li:nth-child(5) button {
+    font-size: 0;
+  }
+  nav ol {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav .active-menu::after {
+    bottom: 0;
+  }
+
+  section.second.active {
+    margin: 0 15% 0 15%;
+  }
+  section.second.active > .image-section {
+    margin-top: 15%;
+  }
+
+  .cross {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 25px;
+    left: 25px;
+  }
+
+  section.first.active {
+    margin: 0 15% 0 15%;
+  }
 }
 
 /*# sourceMappingURL=core.css.map */

@@ -1,6 +1,7 @@
 .progress {
   width: 80%;
-  position: relative;
+  position: absolute;
+  bottom: 25%;
   img {
     width: 76px;
     height: 75px;
@@ -32,7 +33,7 @@
     &:last-of-type {
       right: -75px;
       bottom: -25px;
-      transform: translateX(-40px);
+      transform: translateX(-7px);
     }
   }
 }
