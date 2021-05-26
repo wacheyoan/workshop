@@ -1,0 +1,57 @@
+.progress {
+  width: 80%;
+  position: absolute;
+  bottom: 25%;
+  img {
+    width: 76px;
+    height: 75px;
+    position: absolute;
+    &:first-child {
+      bottom: -25px;
+      left: -75px;
+    }
+    &:nth-child(2) {
+      top: -75px;
+      left: 20%;
+      transform: translateX(-40px);
+    }
+    &:nth-child(3) {
+      top: -75px;
+      left: 40%;
+      transform: translateX(-40px);
+    }
+    &:nth-child(4) {
+      top: -75px;
+      left: 60%;
+      transform: translateX(-40px);
+    }
+    &:nth-child(5) {
+      top: -75px;
+      left: 80%;
+      transform: translateX(-40px);
+    }
+    &:last-of-type {
+      right: -75px;
+      bottom: -25px;
+      transform: translateX(-7px);
+    }
+  }
+}
+progress {
+  background: var(--white);
+  width: 100%;
+  border: 0;
+  border-radius: 60px;
+  &::-moz-progress-bar {
+    background: var(--pink);
+    border-radius: 60px;
+  }
+  &::-webkit-progress-bar {
+    background: transparent;
+    border-radius: 60px;
+  }
+  &::-webkit-progress-value {
+    background: var(--pink);
+    border-radius: 60px;
+  }
+}

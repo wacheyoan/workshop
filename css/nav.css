@@ -1,0 +1,25 @@
+nav {
+  margin: 6% 6% 0 6%;
+}
+nav a {
+  font-family: Teko-Semi, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+  color: var(--purple);
+}
+nav > ol {
+  display: flex;
+  gap: 35px;
+}
+nav > ol > li:not(:first-child) {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+nav > ol > li:first-child {
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=nav.css.map */

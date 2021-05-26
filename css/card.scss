@@ -1,0 +1,67 @@
+.card {
+  position: relative;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 35px 25px;
+  span.ping {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--grey);
+    filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.25));
+    transform: translateY(8px);
+  }
+  .white {
+    background: var(--white);
+  }
+  .blue {
+    background: #189DBA;
+  }
+  .lightblue {
+    background: #53BDE4;
+  }
+  .pink {
+    background: #F0B1CE;
+  }
+  .lightpink {
+    background: #EFBEC8;
+  }
+  .green {
+    background: #B9DFD2;
+  }
+  .purple {
+    background: #B7A3F0;
+  }
+  .lightpurple {
+    background: #C3C2FA;
+  }
+}
+.selectable {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #CE00D2;
+  position: absolute;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.change {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--iris-blue);
+    opacity: 0;
+    left: -2.5px;
+    top: -2.5px;
+    animation: fade 1s;
+  }
+}
+@media screen and (min-width: 958px) {
+.card{
+  width: 435px;
+}
+}
