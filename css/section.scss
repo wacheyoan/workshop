@@ -198,6 +198,11 @@ section.third.active {
   }
 }
 section.fourth.active {
+  >h2{
+    position: absolute;
+    bottom: 25%;
+    animation: moveH2 1s forwards;
+  }
   .info-section {
     .item.active {
       display: flex;
@@ -265,4 +270,24 @@ section.fourth.active {
 
 .image-section {
   position: relative;
+}
+
+
+@keyframes moveH2 {
+  0%{
+    bottom: 25%;
+  }
+  100%{
+    bottom: 85%;
+  }
+}
+
+@media screen and (min-width: 958px) {
+  section.fourth.active {
+    > h2 {
+      position: absolute;
+      bottom: 25%;
+      animation: moveH2 1s forwards;
+    }
+  }
 }

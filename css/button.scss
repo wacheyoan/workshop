@@ -14,10 +14,6 @@
     cursor: url("../img/icones/Cursor/Pointer.svg"), auto;
   }
 }
-.btn-lg {
-  width: 182px;
-  height: 55px;
-}
 .btn-primary {
   background: var(--purple);
   color: var(--white);
@@ -25,15 +21,14 @@
   &:hover {
     background: var(--gradient);
   }
-  &:focus {
-    box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.15), inset 0 4px 4px rgba(0, 0, 0, 0.25);
-  }
 }
 .btn-secondary {
   background: var(--white);
   &:hover {
     background: var(--light-pink);
   }
+}
+.btn-primary,.btn-secondary{
   &:focus {
     box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.15), inset 0 4px 4px rgba(0, 0, 0, 0.25);
   }

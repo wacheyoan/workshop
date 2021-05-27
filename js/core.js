@@ -23,25 +23,32 @@ swipe.addEventListener("after", direction => {
 });
 
 //rip
-window.addEventListener("resize,zoom", function (e){
-    let menu = document.querySelector('.menu');
-    let nav = document.querySelector('nav');
-    if(screen.width > 550){
-        nav.style.display = "block";
-        menu.style.display = "none";
-    }else{
-        nav.style.display = "none";
-        menu.style.display = "block";
-    }
-
-    moveSelectable()
+window.addEventListener("resize", function (e){
+    manageScreen();
 });
 
 document.querySelectorAll('section:not(.hidden)  .ellipse, section:not(.hidden) .trait').forEach(function (e){
     new HoverButton(e);
 })
 
+let menu = document.querySelector('.menu');
+menu.addEventListener('click',function (){
+    menu.style.display = "none";
+    document.querySelector('nav').style.display = "flex";
+    document.querySelector('.cross').style.display = "block";
 
+})
+
+let cross = document.querySelector('.cross');
+cross.addEventListener('click',function (){
+    cross.style.display = "none";
+    document.querySelector('nav').style.display = "none";
+    document.querySelector('.menu').style.display = "block";
+})
+
+
+
+//HANDLE "PAGES"
 function showDiscoveringPage(e) {
     e.preventDefault();
     hideActivePage();
@@ -92,14 +99,6 @@ function showPersoPage(e) {
 
 }
 
-function moveSelectable(){
-    let selected = document.querySelector('.selected');
-    let selectable = document.querySelector('.selectable');
-
-    selectable.style.top = (selected.offsetTop - 2)+"px";
-    selectable.style.left = (selected.offsetLeft - 11) +"px";
-}
-
 function hideActivePage() {
     let active = document.querySelectorAll('section.active')[0];
     active.classList.add('hidden');
@@ -113,6 +112,7 @@ function animateMouse() {
     mouse.classList.add('active')
 }
 
+//DEPENDING OF SWIPE DIRECTION CHANGE CONTENT OF "GAME"
 function swipeGame(direction) {
 
     switch (direction){
@@ -201,6 +201,7 @@ function swipeLeft() {
 
 }
 
+
 function hideMobileMenu(){
     let cross = document.querySelector('.cross');
     cross.style.display = "none";
@@ -210,9 +211,9 @@ function hideMobileMenu(){
     }else{
         document.querySelector('nav').style.display = "block";
     }
-
 }
 
+//MOVE CIRCLE WHEN YOU SELECT A COLOR OF PIXIE
 function pingSelectable(e) {
     let elem = e.target;
     let itemNode = document.querySelector('.item');
@@ -251,10 +252,33 @@ function pingSelectable(e) {
 
 }
 
+function moveSelectable(){
+    let selected = document.querySelector('.selected');
+    let selectable = document.querySelector('.selectable');
+
+    selectable.style.top = (selected.offsetTop - 2)+"px";
+    selectable.style.left = (selected.offsetLeft - 11) +"px";
+}
+
+function manageScreen(){
+    let menu = document.querySelector('.menu');
+    let nav = document.querySelector('nav');
+
+    if(screen.width > 550){
+        nav.style.display = "block";
+        menu.style.display = "none";
+    }else{
+        nav.style.display = "none";
+        menu.style.display = "block";
+    }
+
+    moveSelectable()
+}
+
+//PROGRESS BAR SOFT INCREASE / DECREASE
 function move(value, increase = true) {
     let progress = document.querySelector("progress");
     let width = value;
-
 
     if(increase){
         width = +value - 20;
@@ -283,23 +307,6 @@ function move(value, increase = true) {
 
     }
 }
-
-let menu = document.querySelector('.menu');
-menu.addEventListener('click',function (){
-    menu.style.display = "none";
-    document.querySelector('nav').style.display = "flex";
-    document.querySelector('.cross').style.display = "block";
-
-})
-
-let cross = document.querySelector('.cross');
-cross.addEventListener('click',function (){
-    cross.style.display = "none";
-    document.querySelector('nav').style.display = "none";
-    document.querySelector('.menu').style.display = "block";
-})
-
-
 
 
 
